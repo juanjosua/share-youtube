@@ -7,6 +7,14 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>{{ greetings }}</h1>
+    <!-- <h1>{{ youtube_link }}</h1>
+    <iframe width="560" height="315" src="{{ youtube_link }}" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+
+    <form action="{{ url_for('share') }}" method="POST">
+        Youtube url: <input type="text" name="youtube_link"><br>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>
